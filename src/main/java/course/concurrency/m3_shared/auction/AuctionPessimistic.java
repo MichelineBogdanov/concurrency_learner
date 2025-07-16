@@ -2,7 +2,7 @@ package course.concurrency.m3_shared.auction;
 
 public class AuctionPessimistic implements Auction {
 
-    private Notifier notifier;
+    private final Notifier notifier;
 
     private volatile Bid latestBid = new Bid(0L, 0L, 0L);
 

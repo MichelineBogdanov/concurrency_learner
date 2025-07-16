@@ -4,9 +4,9 @@ import java.util.concurrent.atomic.AtomicReference;
 
 public class AuctionOptimistic implements Auction {
 
-    private Notifier notifier;
+    private final Notifier notifier;
 
-    private AtomicReference<Bid> latestBid = new AtomicReference<>(new Bid(0L, 0L, 0L));
+    private final AtomicReference<Bid> latestBid = new AtomicReference<>(new Bid(0L, 0L, 0L));
 
     public AuctionOptimistic(Notifier notifier) {
         this.notifier = notifier;
